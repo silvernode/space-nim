@@ -7,7 +7,7 @@
 - 4 generic types of items to buy/sell (ore, food, weapons, gas)
 - 5 Non Playing Characters
 - health counters (player and enemy)
-- 2 types of weapons (1 gun, 1 bomb)
+- 2 types of weapons (guns, bombs)
 
 
 ### Items (TODO)
