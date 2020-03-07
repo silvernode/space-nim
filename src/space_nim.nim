@@ -3,10 +3,10 @@
 
 import strformat
 import space_nimpkg/entities
+import space_nimpkg/ui
 import strutils
 
 when isMainModule:
-  #var items = @["gun", "rocket"]
   var ship1: Ship
   ship1 = Ship(name: "Dover",
               hp: 100,
@@ -21,9 +21,14 @@ when isMainModule:
   
   
   
+  proc test() =
+    echo(fmt"{player.name} has {player.credits} credits")
+    player.credits = player.credits - 5
+    echo (fmt"{player.name} has {player.credits} credits")
+    echo (fmt"{player.name} is flying {player.ship}")
+    echo(fmt"{player.ship} is carrying {ship1.cargo.join()}")
 
-  echo(fmt"{player.name} has {player.credits} credits")
-  player.credits = player.credits - 5
-  echo (fmt"{player.name} has {player.credits} credits")
-  echo (fmt"{player.name} is flying {player.ship}")
-  echo(fmt"{player.ship} is carrying {ship1.cargo.join()}")
+    echo (fmt"Invintory for {player.ship}")
+    ShowInvintory(ship1.cargo)
+
+  test()

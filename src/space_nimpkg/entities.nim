@@ -13,3 +13,4 @@ type
         name*: string
         hp*: int
         cargo*: seq[string]
+        state*: string
