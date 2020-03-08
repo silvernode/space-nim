@@ -2,9 +2,9 @@
 
 ## Title Screen
 
--------------------
-|    Space Nim    |
--------------------
+  
+SPACE NIM    
+
   a space trading game
 
 p) Play
@@ -27,7 +27,7 @@ q) Quit
 1) Solo Station
 2) Trnity Station
 3) Harold Station
-4) Scan for enemies
+4) Explore
 
 
 ## Battle Screen
