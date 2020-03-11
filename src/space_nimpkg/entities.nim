@@ -5,12 +5,21 @@ type
         ship*: string
 
 type
-    Enemy* = object
+    Structure* = object
+        kind*: string
+        power*: int
+        
+
+
+type 
+    Item* = object
         name*: string
+        desc*: string
+        worth*: int
 
 type 
     Ship* = object
         name*: string
-        hp*: int
-        cargo*: seq[string]
+        power*: int
+        cargo*: seq[Item]
         state*: string

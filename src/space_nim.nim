@@ -4,13 +4,11 @@
 import strformat
 import space_nimpkg/entities
 import space_nimpkg/ui
+import space_nimpkg/ships
 import strutils
 
 when isMainModule:
   var ship1: Ship
-  ship1 = Ship(name: "Dover",
-              hp: 100,
-              cargo: @["fuel", "drugs"])
 
   var player: Character
   player = Character(name: "Dave",
@@ -26,9 +24,12 @@ when isMainModule:
     player.credits = player.credits - 5
     echo (fmt"{player.name} has {player.credits} credits")
     echo (fmt"{player.name} is flying {player.ship}")
-    echo(fmt"{player.ship} is carrying {ship1.cargo.join()}")
 
-    echo (fmt"Invintory for {player.ship}")
-    ShowInvintory(ship1.cargo)
+    var currentShip = jimi("dover")
+    echo (fmt"Cargo for {currentShip.name}: ")
+
+    
+
+    echo(currentShip.cargo[0].name, ": ", "Worth: ", currentShip.cargo[0].worth, " credits: ", currentShip.cargo[0].desc)
 
   test()
