@@ -23,3 +23,4 @@ type
         power*: int
         cargo*: seq[Item]
         state*: string
+        worth*: int
