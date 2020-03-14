@@ -3,14 +3,7 @@ type
         name*, location*: string
         credits*: int
         ship*: string
-
-type
-    Structure* = object
-        kind*: string
-        power*: int
         
-
-
 type 
     Item* = object
         name*: string
@@ -24,3 +17,9 @@ type
         cargo*: seq[Item]
         state*: string
         worth*: int
+
+type
+    Structure* = object
+        kind*: string
+        power*: int
+        goods*: seq[Item]
