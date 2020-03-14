@@ -25,7 +25,7 @@ when isMainModule:
     echo (fmt"{player.name} has {player.credits} credits")
     echo (fmt"{player.name} is flying {player.ship}")
 
-    var currentShip = jimi("dover")
+    var currentShip = jimi("dover", 120)
     echo (fmt"Cargo for {currentShip.name}: ")
 
     
