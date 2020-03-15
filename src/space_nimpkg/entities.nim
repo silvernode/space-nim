@@ -20,6 +20,8 @@ type
 
 type
     Structure* = object
+        name*: string
         kind*: string
         power*: int
+        state*: string
         goods*: seq[Item]
