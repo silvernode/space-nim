@@ -10,6 +10,7 @@ type
         name*: string
         desc*: string
         worth*: int
+        quantity*: int
 
 type 
     Ship* = object
