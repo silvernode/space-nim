@@ -1,6 +1,7 @@
 type
     Character* = object
-        name*, location*: string
+        name*: string
+        location: string
         credits*: int
         ship*: string
         
@@ -13,6 +14,7 @@ type
 type 
     Ship* = object
         name*: string
+        location*: string
         power*: int
         cargo*: seq[Item]
         state*: string
