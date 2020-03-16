@@ -5,7 +5,7 @@ import items
 var jimi* = Ship(
     name: "Jimi",
     power: 120,
-    cargo: @[shipManual])
+    cargo: @[shipManual, food])
 
 var caroler* = Ship(
     name: "Caroler",
