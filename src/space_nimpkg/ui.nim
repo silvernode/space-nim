@@ -1,6 +1,6 @@
+import entities
 
+proc ShowInventory* (items: Character) =
 
-proc ShowInventory* (items: seq[string]) =
-
-    for i in items:
-        echo i
+    for i in items.ship.cargo:
+        echo i.name
