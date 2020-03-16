@@ -1,7 +1,7 @@
 type
     Character* = object
         name*: string
-        location: string
+        location*: string
         credits*: int
         ship*: string
         

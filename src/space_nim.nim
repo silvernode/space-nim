@@ -2,6 +2,7 @@
 # uses this file as the main entry point of the application.
 
 import strformat
+import space_nimpkg/stations
 import space_nimpkg/entities
 import space_nimpkg/ui
 import space_nimpkg/ships
@@ -17,7 +18,7 @@ when isMainModule:
                     ship: ship.name)
 
   
-  
+  var station = solo
   
   proc test() =
     echo(fmt"{player.name} has {player.credits} credits")
@@ -29,6 +30,6 @@ when isMainModule:
 
     
 
-    echo(ship.cargo[0].name, ": ", "Worth: ", ship.cargo[0].worth, " credits: ", ship.cargo[0].desc)
+    echo(ship.cargo[0].name, ": ", "Worth: ", ship.cargo[0].worth, " credits: ", ship.cargo[0].desc, " Station: ", station.name)
 
   test()
