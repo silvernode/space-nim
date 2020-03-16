@@ -10,15 +10,15 @@ import strutils
 
 when isMainModule:
   
-
+  var station = solo
   var player: Character
   player = Character(name: "Dave",
-                    location: "start",
+                    location: station,
                     credits: 200,
                     ship: jimi)
 
   
-  var station = solo
+  
   
   proc test() =
     echo(fmt"{player.name} has {player.credits} credits")
@@ -29,16 +29,17 @@ when isMainModule:
     echo (fmt"Cargo for {player.ship.name}: ")
 
     ShowInventory(player)
-
+  
     #echo(ship.cargo[0].name, ": ", "Worth: ", ship.cargo[0].worth, " credits: ", ship.cargo[0].desc, " Station: ", station.name)
   var turn: int
   turn = 0
   var input: string
+  
   while true:
 
     
     if turn == 0:
-      stdout.write("How many turns?: ")
+      statusPrompt(player)
       input = readLine(stdin)
 
       turn = input.parseInt()

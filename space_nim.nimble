@@ -13,3 +13,4 @@ bin           = @["space_nim"]
 # Dependencies
 
 requires "nim >= 1.0.4"
+requires "colorize"
