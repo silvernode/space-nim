@@ -1,23 +1,19 @@
 import entities
 import items
 
-proc jimi*(ship_name: string, power: int): Ship =
-    var jimi = Ship(name: ship_name,
-                     power: power,
-                     cargo: @[shipManual()])
-    return jimi
 
-proc caroler*(ship_name: string, power: int): Ship =
-    var caroler = Ship(name: ship_name,
-                        power: power,
-                        cargo: @[shipManual()])
+var jimi* = Ship(name: "Jimi",
+                power: 120,
+                cargo: @[shipManual()])
 
-proc yolen*(ship_name: string, power: int): Ship =
-    var yolen = Ship(name: ship_name,
-                     power: power,
-                     cargo: @[shipManual()])
-
-proc titan*(ship_name: string, power: int): Ship =
-    var titan = Ship(name: ship_name,
-                    power: power,
+var caroler = Ship(name: "Caroler",
+                    power: 200,
                     cargo: @[shipManual()])
+
+var yolen = Ship(name: "Yolen",
+                power: 225,
+                cargo: @[shipManual()])
+
+var titan = Ship(name: "Titan",
+                power: 320,
+                cargo: @[shipManual()])

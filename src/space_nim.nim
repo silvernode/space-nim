@@ -8,13 +8,13 @@ import space_nimpkg/ships
 import strutils
 
 when isMainModule:
-  var ship1: Ship
+  var ship = jimi
 
   var player: Character
   player = Character(name: "Dave",
                     location: "start",
                     credits: 200,
-                    ship: ship1.name)
+                    ship: ship.name)
 
   
   
@@ -25,11 +25,10 @@ when isMainModule:
     echo (fmt"{player.name} has {player.credits} credits")
     echo (fmt"{player.name} is flying {player.ship}")
 
-    var currentShip = jimi("dover", 120)
-    echo (fmt"Cargo for {currentShip.name}: ")
+    echo (fmt"Cargo for {ship.name}: ")
 
     
 
-    echo(currentShip.cargo[0].name, ": ", "Worth: ", currentShip.cargo[0].worth, " credits: ", currentShip.cargo[0].desc)
+    echo(ship.cargo[0].name, ": ", "Worth: ", ship.cargo[0].worth, " credits: ", ship.cargo[0].desc)
 
   test()
