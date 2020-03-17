@@ -27,5 +27,6 @@ type
     Character* = object
         name*: string
         location*: Structure
+        state*: string
         credits*: int
         ship*: Ship
