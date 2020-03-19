@@ -2,10 +2,10 @@ import entities
 import strformat
 import colorize
 
-proc ShowInventory* (items: Character) =
-
-    for i in items.ship.cargo:
-        echo i.name
+proc ShowInventory* (player: Character) =
+    echo(fmt"Inventory for {player.name}:")
+    for i in player.ship.cargo:
+        echo(fmt"{i.name} {i.quantity}")
 
 proc statusPrompt*(player: Character) =
     var playerName = fgLightGreen(fmt"{player.name}")
