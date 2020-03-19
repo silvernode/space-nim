@@ -5,7 +5,9 @@ import strformat
 import space_nimpkg/stations
 import space_nimpkg/entities
 import space_nimpkg/ui
+import space_nimpkg/items
 import space_nimpkg/ships
+import space_nimpkg/tasks
 import strutils
 
 when isMainModule:
@@ -34,21 +36,29 @@ when isMainModule:
   var turn: int
   turn = 0
   var input: string
+  var input2: string
   
   while true:
 
-    
+    ShowInventory(player)
     if turn == 0:
+      stdout.write("How many turns?: ")
+      input2 = readLine(stdin)
       statusPrompt(player)
       input = readLine(stdin)
 
-      turn = input.parseInt()
+      turn = input2.parseInt()
+      if input == "mine":
+        player.ship.cargo.add(ore)
+        
+      #turn = input.parseInt()
     
-    echo turn
+    
 
     
     if turn == 0:
       break
+      
     if turn > 0:
       turn = turn - 1
 
