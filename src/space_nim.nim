@@ -9,6 +9,7 @@ import space_nimpkg/items
 import space_nimpkg/ships
 import space_nimpkg/tasks
 import strutils
+import tables
 
 when isMainModule:
   
@@ -49,7 +50,8 @@ when isMainModule:
 
       turn = input2.parseInt()
       if input == "mine":
-        player.ship.cargo.add(ore)
+        player.ship.cargo[ore.name] = 1
+        mining(player, ore.name)
         
       #turn = input.parseInt()
     

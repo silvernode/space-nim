@@ -1,4 +1,4 @@
-
+import tables
 type 
     Item* = object
         name*: string
@@ -11,7 +11,7 @@ type
         name*: string
         location*: string
         power*: int
-        cargo*: seq[Item]
+        cargo*: Table[string, int]
         state*: string
         worth*: int
 
@@ -21,7 +21,7 @@ type
         kind*: string
         power*: int
         state*: string
-        goods*: seq[Item]
+        goods*: Table[string, int]
 
 type
     Character* = object

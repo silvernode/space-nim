@@ -1,5 +1,6 @@
 import entities
 import items
+import tables
 
 
 
@@ -7,5 +8,6 @@ var solo* = Structure(
     name: "Solo Station",
     kind: "Station",
     power: 5000,
-    state: "available",
-    goods: @[fuel, food, weapons, ore])
+    state: "available")
+solo.goods[ore.name] = 1
+solo.goods[food.name] = 2
