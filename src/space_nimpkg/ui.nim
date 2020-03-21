@@ -2,6 +2,7 @@ import entities
 import strformat
 import colorize
 import tables
+import ships
 
 proc ShowInventory* (player: Character) =
     echo(fmt"Inventory for {player.name}:")

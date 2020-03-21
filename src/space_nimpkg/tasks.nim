@@ -1,8 +1,27 @@
 import entities
 import system
+import items
 import tables
-proc mining*(player: Character, ore: string) =
+import ui
+import ships
+proc mining*(player: Character, ore: Item, turns: int) =
    
+   var turns = turns
+
+
    var player: Character
-   player.ship.cargo[ore] += 1
-   echo "Gathered 1 Ore"
+   while true:
+      if turns > 0:
+         if(player.ship.cargo.hasKey(ore.name)):
+            player.ship.cargo[ore.name] += 1
+            echo("Added 1 ore")
+         else:
+            player.ship.cargo[ore.name] = 1
+            echo("Gathered 1 Ore")
+
+      if turns == 0:
+         ShowInventory(player)
+         break
+      if turns > 0:
+         turns -= 1
+   

@@ -41,17 +41,22 @@ when isMainModule:
   
   while true:
 
-    ShowInventory(player)
+    
     if turn == 0:
-      stdout.write("How many turns?: ")
-      input2 = readLine(stdin)
       statusPrompt(player)
       input = readLine(stdin)
+      if input == "mine":
+        
+        
+        stdout.write("How many turns?: ")
+        input2 = readLine(stdin)
+      
+      
 
       turn = input2.parseInt()
-      if input == "mine":
-        player.ship.cargo[ore.name] = 1
-        mining(player, ore.name)
+
+      mining(player, ore, turn)
+      #ShowInventory(player)
         
       #turn = input.parseInt()
     
