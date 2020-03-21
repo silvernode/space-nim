@@ -4,12 +4,11 @@ import items
 import tables
 import ui
 import ships
-proc mining*(player: Character, ore: Item, turns: int) =
+proc mining*(player: Character, ore: Item, turns: int): Character =
    
    var turns = turns
+   var player = player
 
-
-   var player: Character
    while true:
       if turns > 0:
          if(player.ship.cargo.hasKey(ore.name)):
@@ -24,4 +23,4 @@ proc mining*(player: Character, ore: Item, turns: int) =
          break
       if turns > 0:
          turns -= 1
-   
+   return player   
