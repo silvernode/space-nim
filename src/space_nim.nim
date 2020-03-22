@@ -53,9 +53,11 @@ when isMainModule:
       
       
 
-      turn = input2.parseInt()
+        turn = input2.parseInt()
 
-      player = mining(player, ore, turn)
+        player = mining(player, ore, turn)
+      elif input == "q":
+        quit()
       ShowInventory(player)
         
       #turn = input.parseInt()

@@ -6,8 +6,10 @@ import ui
 import ships
 proc mining*(player: Character, ore: Item, turns: int): Character =
    
-   var turns = turns
-   var player = player
+   
+   var 
+      player = player
+      turns = turns
 
    while true:
       if turns > 0:
@@ -19,7 +21,6 @@ proc mining*(player: Character, ore: Item, turns: int): Character =
             echo("Gathered 1 Ore")
 
       if turns == 0:
-         ShowInventory(player)
          break
       if turns > 0:
          turns -= 1
