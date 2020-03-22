@@ -55,8 +55,8 @@ when isMainModule:
 
       turn = input2.parseInt()
 
-      mining(player, ore, turn)
-      #ShowInventory(player)
+      player = mining(player, ore, turn)
+      ShowInventory(player)
         
       #turn = input.parseInt()
     
