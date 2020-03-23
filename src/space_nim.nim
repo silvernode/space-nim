@@ -37,7 +37,7 @@ when isMainModule:
   var turn: int
   turn = 0
   var input: string
-  var input2: string
+  var input2: int
   
   while true:
 
@@ -49,11 +49,11 @@ when isMainModule:
         
         
         stdout.write("How many turns?: ")
-        input2 = readLine(stdin)
+        input2 = readLine(stdin).parseInt()
       
       
 
-        turn = input2.parseInt()
+        turn = input2
 
         player = mining(player, ore, turn)
       elif input == "q":
