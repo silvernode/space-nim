@@ -35,10 +35,10 @@ when isMainModule:
   
     #echo(ship.cargo[0].name, ": ", "Worth: ", ship.cargo[0].worth, " credits: ", ship.cargo[0].desc, " Station: ", station.name)
   var turn: int
-  turn = 0
   var input: string
   var input2: int
   
+  turn = 0
   while true:
 
     
