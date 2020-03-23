@@ -7,7 +7,7 @@ import ships
 proc ShowInventory* (player: Character) =
     echo(fmt"Inventory for {player.name}:")
     for k, v in pairs(player.ship.cargo):
-        echo(k, v)
+        echo(fmt"{k}: {v}")
 
 proc statusPrompt*(player: Character) =
     var playerName = fgLightGreen(fmt"{player.name}")
