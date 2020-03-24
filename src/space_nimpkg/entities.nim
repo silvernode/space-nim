@@ -18,6 +18,7 @@ type
 
     Structure* = object
         name*: string
+        solarSystem: string
         kind*: string
         power*: int
         state*: string
