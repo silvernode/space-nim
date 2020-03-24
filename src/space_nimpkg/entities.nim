@@ -6,7 +6,7 @@ type
         worth*: int
         quantity*: int
 
-type 
+ 
     Ship* = object
         name*: string
         location*: string
@@ -15,7 +15,7 @@ type
         state*: string
         worth*: int
 
-type
+
     Structure* = object
         name*: string
         kind*: string
@@ -23,7 +23,7 @@ type
         state*: string
         goods*: Table[string, int]
 
-type
+
     Character* = object
         name*: string
         location*: Structure

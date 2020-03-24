@@ -15,25 +15,12 @@ when isMainModule:
   
   var station = solo
   var player: Character
+
   player = Character(name: "Dave",
                     location: station,
                     credits: 200,
                     ship: jimi)
-
   
-  
-  
-  proc test() =
-    echo(fmt"{player.name} has {player.credits} credits")
-    player.credits = player.credits - 5
-    echo (fmt"{player.name} has {player.credits} credits")
-    echo (fmt"{player.name} is flying {player.ship}")
-
-    echo (fmt"Cargo for {player.ship.name}: ")
-
-    ShowInventory(player)
-  
-    #echo(ship.cargo[0].name, ": ", "Worth: ", ship.cargo[0].worth, " credits: ", ship.cargo[0].desc, " Station: ", station.name)
   var turn: int
   var input: string
   var input2: int
@@ -60,10 +47,6 @@ when isMainModule:
         quit()
       ShowInventory(player)
         
-      #turn = input.parseInt()
-    
-    
-
     
     if turn == 0:
       break
