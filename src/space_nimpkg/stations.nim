@@ -6,6 +6,7 @@ import tables
 
 var solo* = Structure(
     name: "Solo Station",
+    solarSystem: "Sol System",
     kind: "Station",
     power: 5000,
     state: "available")
