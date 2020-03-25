@@ -11,4 +11,4 @@ var solo* = Structure(
     power: 5000,
     state: "available")
 solo.goods[ore.name] = 1
-solo.goods[food.name] = 2
+solo.goods[food.name] = 1
