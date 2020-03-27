@@ -17,7 +17,7 @@ proc statusPrompt*(player: Character) =
     stdout.write(fmt"{playerName} :: {playerCredits} :: {playerShip} :: {playerLocation} > ")
 
 
-proc newGrid(height: int, width:int): seq =
+proc newGrid*(height: int, width:int): seq =
 
     var grid = newSeqWith(height, newSeq[int](width))
 
