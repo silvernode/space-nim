@@ -2,7 +2,6 @@ import entities
 import strformat
 import colorize
 import tables
-import ships
 import sequtils
 
 proc ShowInventory* (player: Character) =

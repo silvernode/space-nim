@@ -1,9 +1,6 @@
 import entities
 import system
-#import items
 import tables
-#import ui
-#import ships
 
 
 proc mining*(player: Character, ore: Item, turns: int): Character =
