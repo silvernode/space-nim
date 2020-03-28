@@ -9,7 +9,8 @@ type
  
     Ship* = object
         name*: string
-        location*: string
+        x*: int
+        y*: int
         power*: int
         cargo*: Table[string, int]
         state*: string
@@ -19,6 +20,8 @@ type
     Structure* = object
         name*: string
         solarSystem*: string
+        x*: int
+        y*: int
         kind*: string
         power*: int
         state*: string
