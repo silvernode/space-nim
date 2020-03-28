@@ -25,8 +25,7 @@ when isMainModule:
   
   var turn: int
   var input: string
-  var input2: int
-  
+    
   turn = 0
   while true:
 
@@ -34,26 +33,17 @@ when isMainModule:
     if turn == 0:
       statusPrompt(player)
       input = readLine(stdin)
+
       if input == "mine":
-        
-        
         stdout.write("How many turns?: ")
-        input2 = readLine(stdin).parseInt()
-      
-      
-
-        turn = input2
-
+        turn = readLine(stdin).parseInt()
         player = mining(player, ore, turn)
       elif input == "q":
         quit()
-      ShowInventory(player)
-        
+      elif input == "i":
+        ShowInventory(player)
+      elif input == "m":
+        showGrid(grid)
     
-    if turn == 0:
-      break
-      
     if turn > 0:
       turn = turn - 1
-
-    
