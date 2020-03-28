@@ -23,8 +23,11 @@ proc newGrid*(height: int, width:int): seq =
 
     for i, _ in grid:
         for x, _ in grid[i]:
-        
             grid[i][x] = x+1
-
-
     return grid
+
+proc showGrid*(grid: seq)=
+    for i, _ in grid:
+        for x, y in grid[i]:
+            stdout.write(y)
+        stdout.write("\n")
