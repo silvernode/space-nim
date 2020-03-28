@@ -16,8 +16,7 @@ proc mining*(player: Character, ore: Item, turns: int): Character =
       else:
         player.ship.cargo[ore.name] = 1
         echo("Gathered 1 Ore")
+      turns -= 1
     if turns == 0:
       break
-    if turns > 0:
-      turns -= 1
   return player   
