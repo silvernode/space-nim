@@ -9,4 +9,4 @@ In space Nim, the primary focus is trading commodities and exploring space to fi
 
 # Space Travel  
 
-Traveling in space is limited to exploration which is based on random events. If the option to explore is selected, this will trigger a function that rolls a dice to determine what item the player is found. The player then shown how many turns they can use to gather the discovered item. The player can choose to use all available turns, a portion of available turns, or skip the turns entirely to continue exploration. 
+Traveling in space is limited to exploration and between stations. Exploration is based on random numbers that determine what items are encountered. If the option to explore is selected, this will trigger a function that rolls a dice to determine what item the player is found. The player then shown how many turns they can use to gather the discovered item. The player can choose to use all available turns, a portion of available turns, or skip the turns entirely to continue exploration. 
