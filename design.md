@@ -13,4 +13,9 @@ Traveling in space is limited to exploration and between stations. Exploration i
 
 # Trading 
 
-Trading will happen between space stations which will have different prices for goods based on supply and demand. Stations will also have services that the player can use such as exploration enhancements that increase chances of finding valuable items in space while exploring.
+Trading will happen between space stations which will have different prices for goods based on supply and demand. Stations will also have services that the player can use such as exploration enhancements that increase chances of finding valuable items in space while exploring.  
+
+
+# Stations  
+
+Each station will have a number of goods and each good will have a quantity. If a player purchases a good, the quantity of that good decreases. If the quantity reaches zero, then the station will list that good as in demand. 
