@@ -19,3 +19,14 @@ Trading will happen between space stations which will have different prices for 
 # Stations  
 
 Each station will have a number of goods and each good will have a quantity. If a player purchases a good, the quantity of that good decreases. If the quantity reaches zero, then the station will list that good as in demand. The player can see which stations are in demand for a particular item by pressing information key (I). 
+
+# Player
+
+A player is constructed using the 'Character' type, which has the following properties:  
+
+* Name
+* Location
+* State
+* Credits
+* Ship
+
