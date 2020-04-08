@@ -36,4 +36,4 @@ A player is constructed using the 'Character' type, which has the following prop
 **Credits:** Amount of money player has (int)  
 **Ship:** Current ship player has (Ship), ex.  Yolen  
 
-
+The *name* property can be set when starting the game while other properties are dependant on progression and set based on interaction with the game word. 
