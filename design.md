@@ -2,25 +2,25 @@
 
 The purpose of this document is to plan and detail the goals, features, scope and overall design of the game. 
 
-
-# Concept  
+# 1. Game Mechanics
+> ## 1.1. Concept  
 
 In space Nim, the primary focus is trading commodities and exploring space to find items which can be traded. Space stations are the places where the player can trade items in exchange for credits (currency). 
 
-# Space Travel  
+> ## 1.2. Space Travel  
 
 Traveling in space is limited to exploration and between stations. Exploration is based on random numbers that determine what items are encountered and the amount of those items. If the option to explore is selected, this will trigger a function that rolls a dice to determine what item the player is found. The player then shown how many turns they can use to gather the discovered item. The player can choose to use all available turns, a portion of available turns, or skip the turns entirely to continue exploration. 
 
-# Trading 
+> ## 1.3. Trading 
 
 Trading will happen between space stations which will have different prices for goods based on supply and demand. Stations will also have services that the player can use such as exploration enhancements that increase chances of finding valuable items in space while exploring.  
 
 
-# Stations  
+> ## 1.4. Stations  
 
 Each station will have a number of goods and each good will have a quantity. If a player purchases a good, the quantity of that good decreases. If the quantity reaches zero, then the station will list that good as in demand. The player can see which stations are in demand for a particular item by pressing information key (I). 
 
-# Player
+> ## 1.5. Player
 
 A player is constructed using the 'Character' type, which has the following properties:  
 
