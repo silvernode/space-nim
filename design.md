@@ -30,3 +30,10 @@ A player is constructed using the 'Character' type, which has the following prop
 * Credits
 * Ship
 
+**Name:** Player name (string), ex. "John"  
+**Location:** Current location of player (string), ex. "Solo Station"  
+**State:** Current condition of player (string), ex. "Mining"  
+**Credits:** Amount of money player has (int)  
+**Ship:** Current ship player has (Ship), ex.  Yolen  
+
+
