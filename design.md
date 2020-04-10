@@ -37,3 +37,12 @@ A player is constructed using the 'Character' type, which has the following prop
 **Ship:** Current ship player has (Ship), ex.  Yolen  
 
 The *name* property can be set when starting the game while other properties are dependant on progression and set based on interaction with the game word. 
+
+
+# 2. Gameplay  
+
+The game starts with choosing the name of the player character. From there, the player will be given a ship which will be described on the screen (name, stats), on the same screen, the player will be choose a station from a list as the starting location. Once a station is chosen, the screen will show menu options for that that station. The player can choose to buy, sell, or leave. The buy menu shows the station goods and their quantities, and the sell menu will show goods in the players inventory that they player can sell to the station. If the player chooses to leave the station, they will be shown the travel screen which will list explore, and stations. If the player selects explore, they are taken to a screen that starts and automatic process of finding items which can be sold at stations. If the player selects stations, a list of nearby stations will be shown relative to the players' x,y location.
+
+Exploration also has the chance to encounter an enemy which the player will battle. The combat screen will be interactive in much of the same way combat works in Pokemon games. The Ship of the player will have different turrets which can be selected during combat. If the player wins the battle, items may be dropped from the enemy. If the player loses combat, then one random item in the ship inventory will be discarded and the player will be taken to the nearest space station. 
+
+
