@@ -13,7 +13,7 @@ proc statusPrompt*(player: Character) =
   var playerName = fgLightGreen(fmt"{player.name}")
   var playerCredits = fgLightYellow(fmt"{player.credits}CP")
   var playerShip = fgLightMagenta(fmt"{player.ship.name}")
-  var playerLocation = fgLightCyan(fmt"{player.location.name}")
+  var playerLocation = fgLightCyan(fmt"{player.location}")
   stdout.write(fmt"{playerName} :: {playerCredits} :: {playerShip} :: {playerLocation} > ")
 
 
