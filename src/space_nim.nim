@@ -19,7 +19,7 @@ when isMainModule:
   var grid = newGrid(4,4)
 
   player = Character(name: "Dave",
-                    location: station,
+                    location: grid[0][0],
                     credits: 200,
                     ship: jimi)
   
