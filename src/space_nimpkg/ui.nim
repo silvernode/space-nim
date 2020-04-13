@@ -13,8 +13,9 @@ proc statusPrompt*(player: Character) =
   var playerName = fgLightGreen(fmt"{player.name}")
   var playerCredits = fgLightYellow(fmt"{player.credits}CP")
   var playerShip = fgLightMagenta(fmt"{player.ship.name}")
-  var playerLocation = fgLightCyan(fmt"{player.location}")
-  stdout.write(fmt"{playerName} :: {playerCredits} :: {playerShip} :: {playerLocation} > ")
+  var playerLocation = fgLightCyan(fmt"x:{player.x}, y:{player.y}")
+  var playerState = fgLightMagenta(fmt"{player.state}")
+  stdout.write(fmt"{playerName} :: {playerCredits} :: {playerShip} :: {playerState} :: {playerLocation} > ")
 
 
 proc newGrid*(height: int, width:int): seq =
