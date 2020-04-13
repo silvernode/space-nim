@@ -30,7 +30,8 @@ type
 
   Character* = object
     name*: string
-    location*: int
+    x*: int
+    y*:int
     state*: string
     credits*: int
     ship*: Ship
