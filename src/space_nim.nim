@@ -19,7 +19,9 @@ when isMainModule:
   var grid = newGrid(4,4)
 
   player = Character(name: "Dave",
-                    location: grid[0][0],
+                    x: 0,
+                    y: 0,
+                    state: "idle",
                     credits: 200,
                     ship: jimi)
   
@@ -38,10 +40,25 @@ when isMainModule:
         stdout.write("How many turns?: ")
         turn = readLine(stdin).parseInt()
         player = mining(player, ore, turn)
+
+      elif input == "r":
+        player.x += 1
+
+      elif input == "l":
+        player.x -= 1
+
+      elif input == "u":
+        player.y -= 1
+
+      elif input == "d":
+        player.y += 1
+
       elif input == "q":
         quit()
+
       elif input == "i":
         ShowInventory(player)
+        
       elif input == "m":
         showGrid(grid)
     
