@@ -27,6 +27,9 @@ proc newGrid*(height: int, width:int): seq =
 
 proc showGrid*(grid: seq)=
   for i, _ in grid:
+    if i < 10:
+      stdout.write(" ")
+    stdout.write(i, " ")
     for x, y in grid[i]:
-      stdout.write(y)
+      stdout.write(y, " ")
     stdout.write("\n")
