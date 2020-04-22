@@ -16,7 +16,7 @@ when isMainModule:
   var station = solo
   var player: Character
 
-  var grid = newGrid(4,4)
+  var grid = newGrid(24,24)
 
   player = Character(name: "Dave",
                     x: 0,
