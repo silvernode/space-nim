@@ -1,7 +1,9 @@
 
 
 #import space_nimpkg/
-import terminal
+import 
+    terminal,
+    strformat
 
 proc new_game() =
     echo("A new game has started")
@@ -15,21 +17,33 @@ proc options_menu() =
 proc exit_game() =
     quit(0)
 
+proc gen_menu*(question: string, opts: openArray[string]): char = 
+    echo question
+    for i, e in opts:
+        echo fmt"{i+1}) {e}"
+        
+
+    
+    return getch()
+
+
+
 proc main_menu() =
     
     while true:
-        echo("""
-        Space Nim
-        ----------
+        var 
+            mainMenuQuestion ="Space Nim\n----------"
+            mainMenuResponses =[
+            "New Game",
+            "Load Game",
+            "Options",
+            "Exit"]
 
-        1) New Game
-        2) Load Game
-        3) Options
-        4) Exit
+        
+            input = gen_menu(
+                mainMenuQuestion, 
+                mainMenuResponses)
 
-        """)
-
-        var input = getch()
         eraseScreen()
         case input:
 
@@ -46,8 +60,9 @@ proc main_menu() =
             exit_game()
 
         else:
-            eraseScreen()
+            eraseScreen()#
 
 when isMainModule:
+    eraseScreen()
   
     main_menu()
