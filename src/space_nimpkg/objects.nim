@@ -1,4 +1,3 @@
-import tables
 type
     Player* = object
         name*: string
@@ -9,4 +8,3 @@ type
         name*: string
         attack*: int
         defense*: int
-        credits*: int
