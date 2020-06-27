@@ -5,6 +5,12 @@ import
     terminal,
     strformat
 
+proc space_prompt*(player: Player): string =
+
+    var prompt = (fmt"{player.name} | {player.credits} | {player.ship}: ")
+
+
+    return prompt
 
 proc new_player(): Player =
     var starting_credits = 1000
