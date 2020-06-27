@@ -38,7 +38,7 @@ proc new_player(): Player =
     var answer: char
 
     player.credits = starting_credits
-    player.ship.name = "no ship"
+    player.ship = draco
 
     while true:
       echo("What is your callsign? ")
