@@ -1,11 +1,33 @@
 
 
-#import space_nimpkg/
+import space_nimpkg/objects
 import 
     terminal,
     strformat
 
+
+proc new_player(): Player =
+    var starting_credits = 1000
+    var player: Player
+    var answer: char
+    while true:
+      echo("What is your callsign? ")
+    
+      player.name = readline(stdin)
+      player.credits = starting_credits
+      echo fmt"Your name is: {player.name}"
+      echo "Is this correct? (y/n)"
+      answer = getch()
+      eraseScreen()
+      if answer == 'y':
+        break
+      else:
+        continue
+    return player
+
 proc new_game() =
+    var player: Player = new_player()
+    echo fmt"Hi {player.name} you have {player.credits} credits"  
     echo("A new game has started")
 
 proc load_game() =
@@ -21,15 +43,11 @@ proc gen_menu*(question: string, opts: openArray[string]): char =
     echo question
     for i, e in opts:
         echo fmt"{i+1}) {e}"
-        
-
-    
     return getch()
 
 
 
 proc main_menu() =
-    
     while true:
         var 
             mainMenuQuestion ="Space Nim\n----------"
@@ -39,7 +57,6 @@ proc main_menu() =
             "Options",
             "Exit"]
 
-        
             input = gen_menu(
                 mainMenuQuestion, 
                 mainMenuResponses)
@@ -64,5 +81,4 @@ proc main_menu() =
 
 when isMainModule:
     eraseScreen()
-  
     main_menu()
