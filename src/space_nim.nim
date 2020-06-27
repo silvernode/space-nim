@@ -1,10 +1,8 @@
-
-
-import space_nimpkg/objects
 import 
     terminal,
     strformat,
-    colorize
+    colorize,
+    space_nimpkg/objects
 
 proc clearScreen() =
     eraseScreen()
