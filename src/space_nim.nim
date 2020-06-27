@@ -2,6 +2,7 @@ import
     terminal,
     strformat,
     colorize,
+    space_nimpkg/db,
     space_nimpkg/objects
 
 proc clearScreen() =
@@ -46,7 +47,7 @@ proc new_player(): Player =
       
       echo fmt"Your name is: {player.name}"
       echo "Is this correct? (y/n)"
-      
+
       answer = getch()
       clearScreen()
 
