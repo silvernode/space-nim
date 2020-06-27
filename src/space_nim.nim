@@ -6,6 +6,10 @@ import
     strformat,
     colorize
 
+proc clearScreen() =
+    eraseScreen()
+    setCursorPos(0,0)
+
 proc space_prompt*(player: Player): string =
 
     var player_name = player.name.fgLightCyan
@@ -29,7 +33,7 @@ proc new_player(): Player =
       echo fmt"Your name is: {player.name}"
       echo "Is this correct? (y/n)"
       answer = getch()
-      eraseScreen()
+      clearScreen()
       if answer == 'y':
         break
       else:
@@ -72,7 +76,7 @@ proc main_menu() =
                 mainMenuQuestion, 
                 mainMenuResponses)
 
-        eraseScreen()
+        clearScreen()
         case input:
 
         of '1':
@@ -88,8 +92,8 @@ proc main_menu() =
             exit_game()
 
         else:
-            eraseScreen()#
+            clearScreen()#
 
 when isMainModule:
-    eraseScreen()
+    clearScreen()
     main_menu()
