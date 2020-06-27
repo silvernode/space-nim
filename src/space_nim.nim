@@ -3,11 +3,15 @@
 import space_nimpkg/objects
 import 
     terminal,
-    strformat
+    strformat,
+    colorize
 
 proc space_prompt*(player: Player): string =
 
-    var prompt = (fmt"{player.name} | {player.credits} | {player.ship}: ")
+    var player_name = player.name.fgLightCyan
+    var player_credits = fmt"${player.credits}".fgLightGreen
+    var player_ship_name = player.ship.name.fgLightMagenta
+    var prompt = (fmt"{player_name} | {player_credits} | {player_ship_name}: ")
 
 
     return prompt
@@ -16,6 +20,7 @@ proc new_player(): Player =
     var starting_credits = 1000
     var player: Player
     var answer: char
+    player.ship.name = "no ship"
     while true:
       echo("What is your callsign? ")
     
@@ -33,8 +38,8 @@ proc new_player(): Player =
 
 proc new_game() =
     var player: Player = new_player()
-    echo fmt"Hi {player.name} you have {player.credits} credits"  
-    echo("A new game has started")
+    echo fmt"Hi {player.name}"  
+    stdout.write space_prompt(player)
 
 proc load_game() =
     echo("Open load game menu")
