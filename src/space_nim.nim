@@ -20,6 +20,19 @@ proc space_prompt*(player: Player): string =
 
     return prompt
 
+
+proc main_game_loop(player: Player) =
+  var getchAnswer: char
+  while true:
+    stdout.write space_prompt(player)
+    getchAnswer = getch()
+
+    if getchAnswer == 'q':
+      break
+    if getchAnswer == 's':
+      echo player
+                                
+    
 proc new_player(): Player =
     var starting_credits = 1000
     var player: Player
@@ -43,7 +56,7 @@ proc new_player(): Player =
 proc new_game() =
     var player: Player = new_player()
     echo fmt"Hi {player.name}"  
-    stdout.write space_prompt(player)
+    main_game_loop(player)
 
 proc load_game() =
     echo("Open load game menu")
