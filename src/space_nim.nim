@@ -35,21 +35,27 @@ proc new_player(): Player =
     var starting_credits = 1000
     var player: Player
     var answer: char
+
+    player.credits = starting_credits
     player.ship.name = "no ship"
+
     while true:
       echo("What is your callsign? ")
     
       player.name = readline(stdin)
-      player.credits = starting_credits
+      
       echo fmt"Your name is: {player.name}"
       echo "Is this correct? (y/n)"
+      
       answer = getch()
       clearScreen()
-      if answer == 'y':
+
+      case answer:
+      of 'y':
         break
       else:
         continue
-    return player
+    return player 
 
 proc new_game() =
     var player: Player = new_player()
