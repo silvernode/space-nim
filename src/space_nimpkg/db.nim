@@ -19,3 +19,11 @@ var
         attack:1,
         defense: 5
     )
+
+# STATIONS
+
+    genesis* = Station(
+        name: "Genesis",
+        msg: "Welcome to Genesis, your new beginning",
+        location: Location(x: 0, y: 0)
+    )

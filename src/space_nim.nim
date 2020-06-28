@@ -9,21 +9,24 @@ proc clearScreen() =
     eraseScreen()
     setCursorPos(0,0)
 
-proc space_prompt*(player: Player): string =
+proc space_prompt*(player: Player, station: Station): string =
 
     var player_name = player.name.fgLightCyan
     var player_credits = fmt"${player.credits}".fgLightGreen
     var player_ship_name = player.ship.name.fgLightMagenta
-    var prompt = (fmt"{player_name} | {player_credits} | {player_ship_name}: ")
+    var location_name = station.name.fgLightYellow
+    var prompt = (fmt"{player_name} | {player_credits} | {player_ship_name} | {location_name}: ")
 
 
     return prompt
 
 
 proc main_game_loop(player: Player) =
+  var location = genesis 
   var getchAnswer: char
   while true:
-    stdout.write space_prompt(player)
+    echo location.msg
+    stdout.write space_prompt(player, location)
     getchAnswer = getch()
 
     if getchAnswer == 'q':
@@ -41,12 +44,12 @@ proc new_player(): Player =
     player.ship = draco
 
     while true:
-      echo("What is your callsign? ")
+      stdout.write("What is your callsign?: ")
     
       player.name = readline(stdin)
       
-      echo fmt"Your name is: {player.name}"
-      echo "Is this correct? (y/n)"
+      echo(fmt"Your name is: {player.name}")
+      stdout.write("Is this correct? (y/n): ")
 
       answer = getch()
       clearScreen()
