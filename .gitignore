@@ -2,3 +2,4 @@ nimcache/
 nimblecache/
 htmldocs/
 space_nim
+.vscode
