@@ -9,6 +9,14 @@ proc clearScreen() =
     eraseScreen()
     setCursorPos(0,0)
 
+proc add_to_cargo(player: var Player, item: var Item) = 
+    player.ship.cargo.add(item)
+
+proc show_cargo(player: var Player) = 
+    echo ""
+    for i in player.ship.cargo:
+        echo fmt"{i.name}: {i.desc}"
+
 proc space_prompt*(player: Player, station: Station): string =
 
     var player_name = player.name.fgLightCyan
@@ -21,7 +29,7 @@ proc space_prompt*(player: Player, station: Station): string =
     return prompt
 
 
-proc main_game_loop(player: Player) =
+proc main_game_loop(player: var Player) =
   var location = genesis 
   var getchAnswer: char
   while true:
@@ -29,10 +37,22 @@ proc main_game_loop(player: Player) =
     stdout.write space_prompt(player, location)
     getchAnswer = getch()
 
-    if getchAnswer == 'q':
+    if getchAnswer == 'm':
       break
-    if getchAnswer == 's':
-      echo player
+
+    if getchAnswer == 'q':
+        quit()
+
+    if getchAnswer == 'l':
+      echo player.location
+
+    if getchAnswer == 'a':
+        add_to_cargo(player, laser)
+    if getchAnswer == 'i':
+        show_cargo(player)
+
+    if getchAnswer == 'c':
+        clearScreen()
                                 
     
 proc new_player(): Player =
