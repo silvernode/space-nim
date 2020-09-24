@@ -1,5 +1,9 @@
 type
 
+    Item* = object
+        name*: string
+        desc*: string
+
     Location* = object
         x*, y*: int
 
@@ -13,8 +17,12 @@ type
         name*: string
         attack*: int
         defense*: int
+        cargo*: seq[Item]
 
     Station* = object
         name*: string
         msg*: string
         location*: Location
+
+    
+        
